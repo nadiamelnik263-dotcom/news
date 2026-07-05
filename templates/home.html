@@ -6,10 +6,7 @@
 
 {% if user.is_authenticated %}
 <p>Hello {{ user.username }} and you {{ user.age }}year old</p>
-<form action = "{% url 'logout' %}" method  = "post">
-    {% csrf_token %}
-    <button type = 'submit'>Log out</button>
-</form>
+
 
 {% else %}
 <h1>You a not logged in</h1>
